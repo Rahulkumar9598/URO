@@ -6,7 +6,7 @@ import { useState } from 'react';
 import axios from 'axios'
 import api from '../services/endpoint.js';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart ,increatement ,decrement} from '../Store/CartSlice.js';
+import { addToCart, increatement, decrement } from '../Store/CartSlice.js';
 import { toggleLike } from '../Store/wishlistSlice.js';
 
 
@@ -14,9 +14,19 @@ const BoysFashion = () => {
     const dispatch = useDispatch()
     const wishlist = useSelector(state => state.wishlist)
     const cart = useSelector(state => state.cart)
+    const user = useSelector(state =>state.user)
+    
+
+
+    useEffect(() => {
+        console.log("this is current user ", user);
+
+    }, [])
+
 
     useEffect(() => {
         console.log(wishlist, "this is wishlist")
+
     }, [wishlist])
 
     useEffect(() => {
@@ -29,16 +39,18 @@ const BoysFashion = () => {
     }
 
     const handleAddtoCart = (product) => {
-        dispatch(addToCart([ {...product , quantity : 1}]))
+        dispatch(addToCart([{ ...product, quantity: 1 }]))
     }
 
     const handleIncrementClick = (id) => {
-        dispatch(increatement({id }))
+        dispatch(increatement({ id }))
     }
 
-    const handleDecrementClick = (id)=>{
-        dispatch(decrement({id}))
+    const handleDecrementClick = (id) => {
+        dispatch(decrement({ id }))
     }
+
+
 
     return (
         <div className=' pt-40 pb-20 flex justify-center flex-wrap gap-5 bg-gray-50'>
@@ -62,21 +74,25 @@ const BoysFashion = () => {
 
 
                                 </div>
-                                {!cart.some((product) => product.id === value.id ) ?
+                                {!cart.some((product) => product.id === value.id) ?
                                     <button onClick={() => handleAddtoCart(value)} className='bg-red-400 p-2 w-full rounded text-white font-semibold '>Add to cart</button>
                                     :
-                                    
 
-                                    
+
+
                                     <button
                                         className='bg-red-400 p-2 rounded text-white font-semibold w-full flex'>
 
                                         <div className='flex'>
+                                            {/* {user.role == "admin" &&(
+                                                
+                                            )} */}
                                             <p onClick={(e) => { handleDecrementClick(value.id) }} className='px-2'>-</p>
+                                           
 
                                             <p className='px-3 text-white'>{cart.find(item => item.id === value.id)?.quantity || 0}</p>
 
-                                            <p className='px-2' onClick={(e) => {handleIncrementClick(value.id)}}>+</p>
+                                            <p className='px-2' onClick={(e) => { handleIncrementClick(value.id) }}>+</p>
 
                                         </div>
 

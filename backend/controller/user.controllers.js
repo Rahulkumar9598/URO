@@ -21,7 +21,12 @@ export const handleUserSignup = async (req, res) => {
         console.log(userExist)
 
         if (userExist) {
-            return res.status(400).json({ msg: "user already exist" });
+            return res.status(400).json({
+                msg: "user already exist",
+                error:true,
+                success:false
+
+             });
         }
 
 

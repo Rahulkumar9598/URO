@@ -21,9 +21,10 @@ const login = () => {
     const dispatch = useDispatch()
 
     const user = useSelector(state => state.user)
-
-    console.log(user , "  this is user of ghjkbnknbnmk")
     
+
+    console.log(user, "  this is user of ghjkbnknbnmk")
+
 
 
     const handleSubmit = async (e) => {
@@ -37,20 +38,24 @@ const login = () => {
                 email,
                 password
             }
-            console.log(data)
-            const response = await axios.post(api.user.signup , data, {
+        
+            const response = await axios.post(api.user.signup, data, {
                 headers: {
                     "Content-Type": "application/json"
                 }
             });
-            console.log(response.data , " this is reponse");
+            console.log(response.data, " this is reponse");
             // navigate("/")
+            if (response.data.success) {
+                console.log("this is signup resposne")
+                toast.success("Signup  successfully!")
 
-            toast.success("Signup  successfully!")
+            }
+          
 
 
         } catch (err) {
-            console.log(err)
+           toast.error(" Something went wrong")
 
         }
 
@@ -74,19 +79,21 @@ const login = () => {
                 }
             });
 
-
-          const token = localStorage.setItem("NGauth",  res.data.token)
+            const token = localStorage.setItem("NGauth", res.data.token)
             dispatch(setUserDetalis(res?.data?.user))
-            console.log(res.data?.user?.email , "this is login response")
-            toast.success("Signin successfully!")
+            console.log(res.data?.user?.email, "this is login response")
 
-            navigate("/" , {
-                state:{
-                    email:email
-                }
+            if (res.data.success) {
 
-            })
+                toast.success("Signin successfully!")
+                navigate("/", {
+                    state: {
+                        email: email
+                    }
 
+                })
+
+            }
 
         } catch (err) {
             console.log(err)
@@ -94,12 +101,12 @@ const login = () => {
         }
 
     }
- useEffect(() => {
-    console.log(user , "this is user ")
-    if(user?.email){
-      navigate("/")
-    }
-  },[])
+    useEffect(() => {
+        console.log(user, "this is user ")
+        if (user?.email) {
+            navigate("/")
+        }
+    }, [user])
 
 
     return (

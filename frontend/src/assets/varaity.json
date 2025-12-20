@@ -1,0 +1,51 @@
+
+
+[
+    {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202508/34ce83e7-b66e-456f-81e7-19bfb3b1cfe6_full.jpg?version=1756454910964&tr=f-webp,w-480,c-at_max,dpr-2,n-medium",
+        "title": "shirt1",
+        "price": 30849
+    },
+    {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202509/af499b3b-a819-4637-878b-9d3d0ee0442a_full.jpg?version=1757420560815&tr=f-webp,w-480,c-at_max,dpr-2,n-medium",
+        "title": "shirt2",
+        "price": 10999
+    },
+    {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202509/7d4d36b3-0c91-4c3e-a10a-2a405d85bdd6_full.jpg?version=1757420562964&tr=f-webp,w-480,c-at_max,dpr-2,n-medium",
+        "price": 9990
+    },
+    {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202509/b87e289b-d16b-4936-8f84-9f4dfa2a100a_full.jpg?version=1757420558727&tr=f-webp,w-480,c-at_max,n-normal",
+        "title": "shirt3",
+        "price": 19490
+    },
+        {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202508/34ce83e7-b66e-456f-81e7-19bfb3b1cfe6_full.jpg?version=1756454910964&tr=f-webp,w-480,c-at_max,dpr-2,n-medium",
+        "title": "shirt1",
+        "price": 30849
+    },
+    {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202509/af499b3b-a819-4637-878b-9d3d0ee0442a_full.jpg?version=1757420560815&tr=f-webp,w-480,c-at_max,dpr-2,n-medium",
+        "title": "shirt2",
+        "price": 10999
+    },
+    {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202509/7d4d36b3-0c91-4c3e-a10a-2a405d85bdd6_full.jpg?version=1757420562964&tr=f-webp,w-480,c-at_max,dpr-2,n-medium",
+        "price": 9990
+    },
+    {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202509/b87e289b-d16b-4936-8f84-9f4dfa2a100a_full.jpg?version=1757420558727&tr=f-webp,w-480,c-at_max,n-normal",
+        "title": "shirt3",
+        "price": 19490
+    },
+     {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202509/7d4d36b3-0c91-4c3e-a10a-2a405d85bdd6_full.jpg?version=1757420562964&tr=f-webp,w-480,c-at_max,dpr-2,n-medium",
+        "price": 9990
+    },
+    {
+        "image": "https://static.hopscotch.in/fstatic/boutique/banner/202509/7d4d36b3-0c91-4c3e-a10a-2a405d85bdd6_full.jpg?version=1757420562964&tr=f-webp,w-480,c-at_max,dpr-2,n-medium",
+        "price": 9990
+    }
+   
+]

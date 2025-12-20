@@ -1,0 +1,44 @@
+[
+  {  "id":15793,
+    "image": "https://static.hopscotch.in/fstatic/product/202504/c78fea7b-663d-4808-bd8c-e7f1037215fb_full.jpg?version=1744975120264&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 790,
+    "discount_percent": "20% of price"
+  },
+  {  "id":28756237,
+    "image": "https://static.hopscotch.in/fstatic/product/202501/c4ecc900-09cb-4f50-8aa1-eb31dd084c4a_full.jpg?version=1737009369371&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 590,
+    "discount_percent": "15% of price"
+  },
+  {  "id":33897563,
+    "image": "https://static.hopscotch.in/fstatic/product/202501/f86869d3-1d2c-4305-a4f1-64a400e44c83_full.jpg?version=1737009343314&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 490,
+    "discount_percent": "10% of price"
+  },
+  {  "id":489756,
+    "image": "https://static.hopscotch.in/fstatic/product/202504/c78fea7b-663d-4808-bd8c-e7f1037215fb_full.jpg?version=1744975120264&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 299,
+    "discount_percent": "25% of price"
+  },
+  {   "id":537596,
+    "image": "https://static.hopscotch.in/fstatic/product/202407/c51326dd-c63b-436b-854b-9151a38aa6c8_full.jpg?version=1720215829216&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 699,
+    "discount_percent": "30% of price"
+  },
+  {  "id":67377,
+    "image": "https://static.hopscotch.in/fstatic/product/202504/c78fea7b-663d-4808-bd8c-e7f1037215fb_full.jpg?version=1744975120264&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 299,
+    "discount_percent": "25% of price"
+  },
+  {  "id":723947,
+    "image": "https://static.hopscotch.in/fstatic/product/202501/f1d9223a-5f29-4f94-b605-ea9d45cbdf91_full.jpg?version=1735973230160&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 299,
+    "discount_percent": "25% of price"
+  },
+  {
+    "id":39475 ,
+    "image":"https://cdn.fcglcdn.com/brainbees/images/products/300x364/20238498a.webp",
+    "price":1299,
+    "discount_percent":"15% of price"
+
+  }
+]

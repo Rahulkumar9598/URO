@@ -1,0 +1,37 @@
+[
+  {
+    "image": "https://static.hopscotch.in/fstatic/product/202505/04c3c281-02bd-4925-a431-f5a20f8c4d9e_full.jpg?version=1747716596115&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 790,
+    "discount_percent": "20% of price"
+  },
+  {
+    "image": "https://static.hopscotch.in/fstatic/product/202505/02918a32-db72-4ff7-a766-cff0a1a6323c_full.jpg?version=1747225534323&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 590,
+    "discount_percent": "15% of price"
+  },
+  {
+    "image": "https://static.hopscotch.in/fstatic/product/202412/e0b84f7b-200f-4c8a-bdb1-7113b0f2167e_full.jpg?version=1733863000256&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 490,
+    "discount_percent": "10% of price"
+  },
+  {
+    "image": "https://static.hopscotch.in/fstatic/product/202509/645b1400-d933-41ab-9054-f7127fcfe9d7_full.jpg?version=1758784932608&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 299,
+    "discount_percent": "25% of price"
+  },
+  {
+    "image": "https://static.hopscotch.in/fstatic/product/202401/3d4b8e18-5960-4d3e-b26b-8cc1d506f531_full.jpg?version=1705664995616&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 699,
+    "discount_percent": "30% of price"
+  },
+  {
+    "image": "https://static.hopscotch.in/fstatic/product/202406/f3879354-5e50-42c8-b156-60714b7a1943_full.jpg?version=1719231549389&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 299,
+    "discount_percent": "25% of price"
+  },
+  {
+    "image": "https://static.hopscotch.in/fstatic/product/202507/4c88fa26-a55f-47a8-bb68-300f78f1360f_full.jpg?version=1753096216929&tr=f-webp,w-480,ar-5-7,n-normal",
+    "price": 299,
+    "discount_percent": "25% of price"
+  }
+]

@@ -5,10 +5,14 @@ import userRouter from './routes/user.routes.js';
 import cors from 'cors'
 import {User} from './models/user.models.js'
 import imageRouter from "./routes/image.routes.js";
+import errrMiddleware from "./middleware/errorMiddleware.js";
+import { sendMail } from "./config/email.js";
+
+const app = express();
 
 dotenv.config();
 connectDatabase();
-const app = express();
+sendMail()
 
 app.use(cors({
     origin:"http://localhost:5173"
@@ -67,7 +71,7 @@ app.use("/", (req, res) => {
 });
 
 
-
+app.use(errrMiddleware)
 
 app.listen(port, () => {
     console.log(`Server is running on port ${process.env.PORT || 8000}`);

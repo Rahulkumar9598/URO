@@ -4,10 +4,9 @@ import { handleUserSignup ,handleUserSignin, handleGetUserDetails, } from  '../c
 import {handleCart} from '../controller/cart.controllers.js'
 
 
-
 // userRouter.get("/home",handleUserLogin)
-userRouter.post("/signup",handleUserSignup)
-userRouter.post("/signin",handleUserSignin)
+userRouter.post("/signup" , handleUserSignup)
+userRouter.post("/signin" , handleUserSignin)
 userRouter.post("/cart",handleCart )
 userRouter.post("/handle-get-details" ,handleGetUserDetails)
 

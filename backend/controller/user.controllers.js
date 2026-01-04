@@ -4,29 +4,32 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken"
 
 
-export const handleUserSignup = async (req, res) => {
+export const handleUserSignup = async (req, res, next) => {
     try {
         console.log(req.body)
         const { name, email, password } = req.body;
 
         if (!name || !email || !password) {
-            return res.json({
-                message: "All field are required",
-                error: true,
-                success: false
 
-            })
+            const error = new Error("All fields are required");
+            error.status = 400;
+            error.success = false;
+            error.error = true;
+            return next(error);
         }
+
+
         const userExist = await User.findOne({ email });
         console.log(userExist)
 
         if (userExist) {
-            return res.status(400).json({
-                msg: "user already exist",
-                error:true,
-                success:false
 
-             });
+            const error = new Error("This email is already register ");
+            error.status = 400;
+            error.success = false;
+            error.error = true;
+            return next(error);
+
         }
 
 
@@ -53,12 +56,12 @@ export const handleUserSignup = async (req, res) => {
         })
 
     } catch (err) {
-        console.log(err)
+        next(err)
 
     }
 }
 
-export const handleUserSignin = async (req, res) => {
+export const handleUserSignin = async (req, res, next) => {
     try {
 
         const { email, password } = req.body;
@@ -74,22 +77,17 @@ export const handleUserSignin = async (req, res) => {
         const user = await User.findOne({ email })
 
         if (!user) {
-            return res.status(400).json({
-                message: "This email is not registerd",
-                error: true,
-                success: false
-            })
+            const error = new Error("This email is not registered");
+            error.status = 400;
+            return next(error);
         }
 
         const isMatch = bcrypt.compareSync(password, user.password);
         // console.log(pass)
         if (!isMatch) {
-            return res.status(400).json({
-                message: " password not match",
-                error: true,
-                succcess: false
-
-            })
+            const error = new Error("Password not match");
+            error.status = 400;
+            return next(error);
         }
 
 
@@ -104,31 +102,37 @@ export const handleUserSignin = async (req, res) => {
 
         })
     } catch (err) {
-        console.log(err)
+        next(err)
     }
 
 }
 
-export const handleGetUserDetails = async (req, res) => {
+export const handleGetUserDetails = async (req, res, next) => {
+    try {
+        const { token } = req.body
+        const data = jwt.decode(token)
 
-    const { token } = req.body
-    const data = jwt.decode(token)
+        console.log(data.userId, "this is my token  ")
+        const user = await User.findById(data.userId)
+        console.log(user, " this is user ")
 
-    console.log(data.userId , "this is my token  ")
-    const user = await User.findById(data.userId )
-    console.log(user, " this is user ")
-
-    if (!user) {
-        return res.status(404).json({
-            message: " user not found",
+        if (!user) {
+            return res.status(404).json({
+                message: " user not found",
+                success: true,
+                error: false
+            })
+        }
+        return res.status(200).json({
+            message: "this is user details",
             success: true,
-            error: false
+            error: false,
+            user
         })
+
+    } catch (err) {
+        next(err)
     }
-    return res.status(200).json({
-        message: "this is user details",
-        success: true,
-        error: false,
-        user
-    })
+
+
 }

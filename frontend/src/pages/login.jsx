@@ -55,7 +55,7 @@ const login = () => {
 
 
         } catch (err) {
-           toast.error(" Something went wrong")
+          toast.error(err?.response?.data?.message || "Something went wrong");
 
         }
 
@@ -96,11 +96,13 @@ const login = () => {
             }
 
         } catch (err) {
-            console.log(err)
-            toast.error("please try again")
+            console.log("this is error response",err)
+         toast.error(err?.response?.data?.message || "Something went wrong");
         }
 
     }
+
+
     useEffect(() => {
         console.log(user, "this is user ")
         if (user?.email) {

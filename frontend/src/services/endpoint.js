@@ -5,7 +5,8 @@ const api = {
         signup:BASE_URL + "/user/signup",
         signin:BASE_URL + "/user/signin",
         cart:BASE_URL+ "/user/cart",
-        handleGetDetails:BASE_URL + "/user/handle-get-details"
+        handleGetDetails:BASE_URL + "/user/handle-get-details",
+        googlelogin :BASE_URL + "/user/handleGoogleLogin"
     },
     image:{
         uploadImage :BASE_URL + "/image/user-image"

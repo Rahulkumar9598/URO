@@ -11,20 +11,20 @@ import BoysFashion from './pages/BoysFashion'
 
 
 function App() {
-    const [jokes , setJokes] = useState([])
+    // const [jokes , setJokes] = useState([])
    
 
 
-    useEffect(()=>{
-        axios.get('/api/jokes')
-        .then((response)=>{
-            setJokes(response.data)
-        })
-        .catch((err)=>{
-            console.log(err)
-        })
+    // useEffect(()=>{
+    //     axios.get('/api/jokes')
+    //     .then((response)=>{
+    //         setJokes(response.data)
+    //     })
+    //     .catch((err)=>{
+    //         console.log(err)
+    //     })
 
-    })
+    // })
 
 
     return (

@@ -18,14 +18,24 @@ const Image = () => {
             const res = await axios.post(api.image.uploadImage, formData)
             console.log(res, " this is image upload response");
             setImage(res.data.imageUrl)
+            // handleSaveImage()
 
-
+//    yaha image refresh  karne per hat ja rahi hai iselye image ko backend mein save karna hoga 
 
 
         } catch (err) {
             console.log(err, "this is error ")
         }
     }
+
+
+    // const handleSaveImage = async()=>{
+    //     try {
+            
+    //     } catch (error) {
+            
+    //     }
+    // }
 
     return (
         <div className='bg-pink-100 p-100'>

@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken"
 
 
+
 export const handleUserSignup = async (req, res, next) => {
     try {
         console.log(req.body)
@@ -135,4 +136,38 @@ export const handleGetUserDetails = async (req, res, next) => {
     }
 
 
+}
+
+export const handleGoogleLogin = async (req, res, next) => {
+    try {
+
+        const { token } = req.body
+        console.log(token, " this is my token of google login")
+
+        if(!token){
+            return res.status(400).json({
+                message:" token is required",
+                error:true,
+                success:false
+            })
+        }
+
+        const decoded = jwt.decode(token);
+
+        const user = {
+            name: decoded.name,
+            email: decoded.email,
+            avatar: decoded.picture,
+        };
+
+        res.status(200).json({
+            message:"google login successfully",
+            success: true,
+            user,
+            token
+        });
+    } catch (error) {
+        next(error)
+
+    }
 }

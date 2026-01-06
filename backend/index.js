@@ -63,7 +63,7 @@ const port = process.env.PORT || 8000
 //     newUser.save();
 // })
 
-app.use("/user" , userRouter)
+app.use("/user",userRouter)
 app.use("/image",imageRouter)
 
 app.use("/", (req, res) => {

@@ -10,6 +10,8 @@ import { addToCart, increatement, decrement } from '../Store/cartSlice.js';
 import { toggleLike } from '../Store/wishlistSlice.js';
 
 
+
+
 const BoysFashion = () => {
     const dispatch = useDispatch()
     const wishlist = useSelector(state => state.wishlist)

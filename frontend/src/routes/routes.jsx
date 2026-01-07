@@ -6,11 +6,11 @@ import Home from "../pages/Home";
 import BoysFashion from "../pages/BoysFashion";
 import GirlFashion from "../pages/GirlFashion";
 import { Cart } from "../pages/Cart";
-import Location from "../pages/location";
 import FootwearPage from "../pages/FootWear";
 import Image from "../pages/image";
 import ProtectedRoutes from "../utils/protectedRoutes";
 import Redux from "../pages/Redux";
+import Location from "../pages/Location"
 
 export const router = createBrowserRouter(
     [

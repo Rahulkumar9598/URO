@@ -5,12 +5,12 @@ import Map from "../pages/Map";
 import Home from "../pages/Home";
 import BoysFashion from "../pages/BoysFashion";
 import GirlFashion from "../pages/GirlFashion";
-import Redux from "../pages/redux";
 import { Cart } from "../pages/Cart";
 import Location from "../pages/location";
 import FootwearPage from "../pages/FootWear";
 import Image from "../pages/image";
 import ProtectedRoutes from "../utils/protectedRoutes";
+// import Redux from "../pages/Redux";
 
 export const router = createBrowserRouter(
     [
@@ -44,10 +44,10 @@ export const router = createBrowserRouter(
                             path: "/girl-fashion",
                             element: <GirlFashion />
                         },
-                        {
-                            path: "/redux",
-                            element: <Redux />
-                        },
+                        // {
+                        //     path: "/redux",
+                        //     element: <Redux />
+                        // },
                         {
                             path: "/cart",
                             element: <Cart />

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import axios from 'axios'
 import api from '../services/endpoint.js';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, increatement, decrement } from '../Store/CartSlice.js';
+import { addToCart, increatement, decrement } from '../Store/cartSlice.js';
 import { toggleLike } from '../Store/wishlistSlice.js';
 
 

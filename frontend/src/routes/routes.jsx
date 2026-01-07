@@ -10,7 +10,7 @@ import Location from "../pages/location";
 import FootwearPage from "../pages/FootWear";
 import Image from "../pages/image";
 import ProtectedRoutes from "../utils/protectedRoutes";
-// import Redux from "../pages/Redux";
+import Redux from "../pages/Redux";
 
 export const router = createBrowserRouter(
     [
@@ -44,10 +44,10 @@ export const router = createBrowserRouter(
                             path: "/girl-fashion",
                             element: <GirlFashion />
                         },
-                        // {
-                        //     path: "/redux",
-                        //     element: <Redux />
-                        // },
+                        {
+                            path: "/redux",
+                            element: <Redux />
+                        },
                         {
                             path: "/cart",
                             element: <Cart />

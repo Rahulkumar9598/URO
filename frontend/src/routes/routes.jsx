@@ -7,8 +7,8 @@ import BoysFashion from "../pages/BoysFashion";
 import GirlFashion from "../pages/GirlFashion";
 import { Cart } from "../pages/Cart";
 import FootwearPage from "../pages/FootWear";
-import Image from "../pages/image";
-import ProtectedRoutes from "../utils/protectedRoutes";
+import Image from "../pages/Image";
+import ProtectedRoutes from "../utils/ProtectedRoutes";
 import Redux from "../pages/Redux";
 import Location from "../pages/Location"
 

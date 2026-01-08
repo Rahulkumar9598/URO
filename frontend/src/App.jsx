@@ -30,7 +30,6 @@ function App() {
     return (
         <>
             <Navbar />
-            <Navbar2 />
             <Outlet />
             <Footer />
 

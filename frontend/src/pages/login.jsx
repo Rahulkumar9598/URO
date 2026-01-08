@@ -187,6 +187,7 @@
 // }
 
 // export default login
+
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
@@ -253,6 +254,8 @@ const Login = () => {
         }
     }
 
+
+    
     //google login
 
     useEffect(() => {
@@ -270,6 +273,7 @@ const Login = () => {
     }, []);
 
     const handleCredentialLogin = async (response) => {
+        console.log(response.credential , " this  is my creadentail okkk")
 
         try {
             if (response?.credential) {
@@ -282,9 +286,13 @@ const Login = () => {
 
                 if (res.data.success) {
                     localStorage.setItem("user", JSON.stringify(res.data.user));
+                    dispatch(setUserDetalis(res?.data?.user))
+                      navigate("/")
                 }
 
             }
+
+           
 
         } catch (error) {
             toast.error(error?.response?.data?.message)
@@ -301,6 +309,7 @@ const Login = () => {
     //         navigate("/")
     //     }
     // }, [currentuser])
+
 
     return (
         <div className='min-h-[85vh] mt-25 flex items-center justify-center p-4 bg-gradient-to-b from-[#fff8f0] via-[#fff5eb] to-[#fff0e6]'>

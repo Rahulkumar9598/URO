@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IoCartOutline } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
+import Navbar2 from './Navbar2';
+import { User } from '../../../backend/models/user.models';
+import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
   // const user = JSON.parse(localStorage.getItem("googleLoginUser"));
-  const user = JSON.parse(localStorage.getItem("user"));
+  
+  const [user , setUser] = useState(localStorage.getItem("user"))
+  const updatedUser = useSelector(state => state.user)
+
+  useEffect(() => {
+    console.log(updatedUser , "this is user")
+    setUser(updatedUser)
+  },[updatedUser])
+
+
   
   return (
     
@@ -30,6 +42,7 @@ const Navbar = () => {
 
         </ul>
     </div>
+    <Navbar2/>
     </>
   )
 }

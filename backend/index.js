@@ -14,9 +14,14 @@ dotenv.config();
 connectDatabase();
 sendMail()
 
-app.use(cors({
-    origin:"http://localhost:5173"
-}));
+app.use(cors([   {
+
+    origin:"http://localhost:5173",
+    origin:"https://uro.onrender.com",
+    origin:"http://localhost:8080/user/handleGoogleLogin"
+}
+    
+]));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

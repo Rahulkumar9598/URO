@@ -10,7 +10,7 @@ import Image from "../pages/Image";
 import Redux from "../pages/Redux";
 import Location from "../pages/Location"
 import Login from "../pages/login";
-import ProtectedRoutes from "../utils/protectedRoutes";
+import ProtectedRoutes from "../utils/ProtectedRoutes";
 
 export const router = createBrowserRouter(
     [

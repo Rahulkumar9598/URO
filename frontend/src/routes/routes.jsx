@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import Login from "../pages/Login";
 import Map from "../pages/Map";
 import Home from "../pages/Home";
 import BoysFashion from "../pages/BoysFashion";
@@ -8,9 +7,10 @@ import GirlFashion from "../pages/GirlFashion";
 import { Cart } from "../pages/Cart";
 import FootwearPage from "../pages/FootWear";
 import Image from "../pages/Image";
-import ProtectedRoutes from "../utils/ProtectedRoutes";
 import Redux from "../pages/Redux";
 import Location from "../pages/Location"
+import Login from "../pages/login";
+import ProtectedRoutes from "../utils/protectedRoutes";
 
 export const router = createBrowserRouter(
     [

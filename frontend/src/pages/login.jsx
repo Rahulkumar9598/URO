@@ -194,7 +194,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import api from '../services/endpoint.js';
 import { useDispatch, useSelector } from "react-redux";
-import { setUserDetalis } from '../Store/userReducer.js';
+import { setUserDetalis } from '../Store/UserSlice.js';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 

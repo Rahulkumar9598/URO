@@ -25,7 +25,7 @@ const Navbar = () => {
             <li><IoSearchOutline size={30} /></li>
             <li><CiHeart size={30}/></li>
           
-           <Link  to="/login" className='flex gap-1' >  <p className='pt-2'>{user.name}</p><img src={user.avatar} alt="fghj"  className='rounded-full h-13 w-13'/> </Link>
+           <Link  to="/login" className='flex gap-1' >  <p className='pt-2'>{user?.name}</p><img src={user?.avatar} alt="fghj"  className='rounded-full h-13 w-13'/> </Link>
             <Link to="/cart"><IoCartOutline size={30} /></Link>
 
         </ul>
